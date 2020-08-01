@@ -12,16 +12,16 @@ class RegistrationSerializer(serializers.ModelSerializer):
             "blank": "Password cannot be empty.",
             "min_length": "Password must be atleast 8 characters.",
         },
-        allow_blank=False,
-        required=True
+        allow_blank=True,
+        required=False
     )
     name = serializers.CharField(
-        allow_blank=False,
-        required=True,
+        allow_blank=True,
+        required=False,
         error_messages={
             "required": "Name field is required.",
         },)
-    phone = serializers.CharField(allow_blank=False, required=True, error_messages={
+    phone = serializers.CharField(allow_blank=True, required=False, error_messages={
         "required": "Name field is required.",
     },)
 
