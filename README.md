@@ -29,5 +29,7 @@ You can download the Arduino IDE from: https://www.arduino.cc/en/main/software
 3. Copy the source code from IoT folder.
 4. Connect the arduino to PC via usb cable.
 5. Compile and upload the code to the board.
-
+6. Open the ide console to view the output values.
+7. Connect our android app to the bluetooth module.
+8. Voila! You have the fuel tank level values on your mobile app.
 
