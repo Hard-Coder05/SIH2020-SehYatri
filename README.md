@@ -7,10 +7,11 @@ We've created the backend of our project in Django using the Django's predefined
 
 The **API** for registration and login is served on the heroku app at :  http://whispering-harbor-50094.herokuapp.com/api/docs
 
-##IoT :
+## IoT :
 
 We are using Arduino Uno microcontroller board to send fuel tank level sensor data to the android app via bluetooth.
-The components used :
+
+### The components used :
 
 1. Arduino Uno
 2. Ultrasonic Sensor (fuel level sensor)
@@ -19,5 +20,14 @@ The components used :
 5. USB Cable
 6. Arduino IDE (to upload program to the board)
 
+You can download the Arduino IDE from: https://www.arduino.cc/en/main/software
+
+### Steps :
+
+1. Connect the IoT components.
+2. Download and install arduino ide.
+3. Copy the source code from IoT folder.
+4. Connect the arduino to PC via usb cable.
+5. Compile and upload the code to the board.
 
 
