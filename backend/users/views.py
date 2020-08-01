@@ -47,28 +47,28 @@ class LoginView(APIView):
     )
     def post(self, request):
         return Response({},status.HTTP_202_ACCEPTED)
-        # serializer = LoginSerializer(data=request.data)
+        serializer = LoginSerializer(data=request.data)
 
-        # if serializer.is_valid():
-        #     found_phone = serializer.data['phone']
+        if serializer.is_valid():
+            found_phone = serializer.data['phone']
 
-        #     user = authenticate(
-        #         username=serializer.data['phone'],
-        #         password=serializer.data['password']
-        #     )
-        #     if user:
-        #         token, _ = Token.objects.get_or_create(user=user)
-        #         return Response({'token': f"Token {token.key}"}, status.HTTP_202_ACCEPTED)
-        #     else:
-        #         try:
-        #             if User.objects.get(phone=found_phone):
-        #                 return Response({'detail': 'Credentials did not match'}, status.HTTP_401_UNAUTHORIZED)
+            user = authenticate(
+                username=serializer.data['phone'],
+                password=serializer.data['password']
+            )
+            if user:
+                token, _ = Token.objects.get_or_create(user=user)
+                return Response({'token': f"Token {token.key}"}, status.HTTP_202_ACCEPTED)
+            else:
+                try:
+                    if User.objects.get(phone=found_phone):
+                        return Response({'detail': 'Credentials did not match'}, status.HTTP_401_UNAUTHORIZED)
 
-        #         except User.DoesNotExist:
-        #             return Response({"detail": "User not found"}, status.HTTP_404_NOT_FOUND)
-        # else:
-        #     data = serializer.errors
-        #     return Response(data, status.HTTP_400_BAD_REQUEST)
+                except User.DoesNotExist:
+                    return Response({"detail": "User not found"}, status.HTTP_404_NOT_FOUND)
+        else:
+            data = serializer.errors
+            return Response(data, status.HTTP_400_BAD_REQUEST)
 
 
 class RealtimeView(APIView):
