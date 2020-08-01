@@ -26,6 +26,6 @@ void loop() {
   duration=pulseIn(echoPin,HIGH);
   distance=duration/29/2;
   
-  Serial.println(distance);
+  Serial.println(distance+" ~");
  
 }

@@ -109,16 +109,12 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
     };
 
 
-
-
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         EnableDisable=(Button)findViewById(R.id.button);
         Recieve=(Button)findViewById(R.id.button4);
-//        Send=(Button)findViewById(R.id.button11);
         EnableDiscoverable=(Button)findViewById(R.id.button2);
         Discover=(Button)findViewById(R.id.button3);
         lvNewDevices = (ListView) findViewById(R.id.lvNewDevices);
@@ -153,7 +149,6 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
         EnableDiscoverable.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
                 Intent discoverableIntent = new Intent(BluetoothAdapter.ACTION_REQUEST_DISCOVERABLE);
                 discoverableIntent.putExtra(BluetoothAdapter.EXTRA_DISCOVERABLE_DURATION, 300);
             }
@@ -161,17 +156,13 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
         Discover.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
                 if(mBluetoothAdapter.isDiscovering()){
                     mBluetoothAdapter.cancelDiscovery();
                     Log.d(TAG, "btnDiscover: Canceling discovery.");
                     ActivityCompat.requestPermissions(MainActivity.this,new String[]{Manifest.permission.ACCESS_FINE_LOCATION},1);
                     ActivityCompat.requestPermissions(MainActivity.this,new String[]{Manifest.permission.ACCESS_COARSE_LOCATION},1);
-
                     //check BT permissions in manifest
-
                     mBluetoothAdapter.startDiscovery();
-
                 }
                 if(!mBluetoothAdapter.isDiscovering()){
                     ActivityCompat.requestPermissions(MainActivity.this,new String[]{Manifest.permission.ACCESS_FINE_LOCATION},1);
@@ -193,16 +184,6 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
                 startActivity(connection);
             }
         });
-        /*Send.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent connection=new Intent(MainActivity.this,Sending.class);
-                connection.putExtra(EXTRA_ADDRESS, deviceAddress);
-                startActivity(connection);
-
-            }
-        });*/
-
     }
 
     @Override
@@ -222,9 +203,6 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
 
         Intent connection=new Intent(MainActivity.this,Connection.class);
         connection.putExtra(EXTRA_ADDRESS, deviceAddress);
-
-
-
 
     }
 }

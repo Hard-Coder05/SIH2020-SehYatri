@@ -12,10 +12,8 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
-
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.app.ActivityCompat;
-
 import java.io.IOException;
 import java.io.InputStream;
 import java.util.UUID;
@@ -34,6 +32,7 @@ public class Connection extends AppCompatActivity {
     InputStream mmInStream=null;
     String incomingMessage;
     StringBuilder messages;
+    String displayMessage;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -52,8 +51,6 @@ public class Connection extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 new ConnectBT().execute();
-
-
             }
         });
         Disconnect.setOnClickListener(new View.OnClickListener() {
@@ -80,13 +77,12 @@ public class Connection extends AppCompatActivity {
                     @Override
                     public void run() {
                         ListenInput.start();
-                        incomingData.setText(messages);
+                        incomingData.setText(displayMessage);
                         handler.postDelayed(this,200);
                     }
                 };
                 runnable.run();
             }});
-
     }
     Thread ListenInput=new Thread(){
         @Override
@@ -104,30 +100,24 @@ public class Connection extends AppCompatActivity {
                         }
                         bytes = mmInStream.read(buffer);
                         incomingMessage = new String(buffer, 0, bytes);
+                        messages.delete(0, messages.length());
                         messages.append(incomingMessage);
-
-
-
-
-
+                        int endOfLineIndex = messages.indexOf("~");                    // determine the end-of-line
+                        String dataInPrint = messages.substring(0, endOfLineIndex);    // extract string
+                        displayMessage=dataInPrint;
+                        messages.delete(0, messages.length());
                     } catch (IOException e) {
-
 
                     }
                 }
             } catch (IOException e) {
                 e.printStackTrace();
             }
-
-
         }
     };
-
-
     private class ConnectBT extends AsyncTask<Void, Void, Void>  // UI thread
     {
         private boolean ConnectSuccess = true; //if it's here, it's almost connected
-
         @Override
         protected void onPreExecute()
         {
@@ -144,11 +134,8 @@ public class Connection extends AppCompatActivity {
                     ActivityCompat.requestPermissions(Connection.this,new String[]{Manifest.permission.BLUETOOTH},1);
                     ActivityCompat.requestPermissions(Connection.this,new String[]{Manifest.permission.BLUETOOTH_ADMIN},1);
                     ActivityCompat.requestPermissions(Connection.this,new String[]{Manifest.permission.BLUETOOTH_PRIVILEGED},1);
-
                     myBluetooth = BluetoothAdapter.getDefaultAdapter();//get the mobile bluetooth device
-
                     BluetoothDevice dispositivo = myBluetooth.getRemoteDevice(address);
-
                     //connects to the device's address and checks if it's available
                     btSocket = dispositivo.createInsecureRfcommSocketToServiceRecord(myUUID);//create a RFCOMM (SPP) connection
                     BluetoothAdapter.getDefaultAdapter().cancelDiscovery();
@@ -165,7 +152,6 @@ public class Connection extends AppCompatActivity {
         protected void onPostExecute(Void result) //after the doInBackground, it checks if everything went fine
         {
             super.onPostExecute(result);
-
             if (!ConnectSuccess)
             {
                 Toast.makeText(getApplicationContext(),"Connection Failed",Toast.LENGTH_SHORT).show();
