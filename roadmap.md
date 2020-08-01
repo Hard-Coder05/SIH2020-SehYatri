@@ -46,6 +46,7 @@ Features : (as suggested in the problem statement)
   - Voice Control
   - Petrol fraud
   - Security
+  - More CS
 ##### Track
 Coming Soon...
 ##### Tech Stack -
