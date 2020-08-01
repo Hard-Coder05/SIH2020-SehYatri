@@ -3,9 +3,18 @@
 
 ##### Introduction
 
-Coming soon..
+SIH 2020 PS AJ128 under Ministry of Petroleum & Natural Gas.
+The aim is to build an app that can help users in regular fuel filling and self driving.
 
-Some of the major key principles of our app -
+The PS AJ128 as on the official website -
+
+"We can map all the retail outlets on Google Map and can have a application connected to fuel tank sensor which will generate an automated message and path may pop up regarding the nearest fuel station with details of fuel prices and the total fuel to be top up for covering the remaining distance if the fuel level drops a particular level. Design an application to recommend when to fuel the vehicle and what petrol pump to use. Provide facility to provide ratings to the fuel station and recommend fuel station based on the ratings."
+
+Category : Software
+
+Domain Bucket : Energy/Renewable Energy
+
+Some of the major key principles of our solution -
  - Feasible
  - User-Friendly
  - Scalable
@@ -18,7 +27,7 @@ Features : (as suggested in the problem statement)
   - Display of real time fuel levels
   - Fuel Low Alert Notification
   - Daily fuel price
-  - Navigation to petrol pumps
+  - Navigation to fuel pumps
   - Rating petrol pumps
   - Priotizing fuel stations on rating
   - Fuel recommendation
