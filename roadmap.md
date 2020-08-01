@@ -11,6 +11,32 @@ Some of the major key principles of our app -
  - Scalable
   - Minimum Modidfication/Expertise
   - Mass Appeal (UI/UX)
+ 
+Features : (as suggested in the problem statement)
+  - User Login and Registration Auth
+  - Connectivity with the fuel gauge sensor
+  - Display of real time fuel levels
+  - Fuel Low Alert Notification
+  - Daily fuel price
+  - Navigation to petrol pumps
+  - Rating petrol pumps
+  - Priotizing fuel stations on rating
+  - Fuel recommendation
+  
+ Features : (added from our side)
+  - Choice of Language
+  - Tutorial to help access the app on App
+  - SoS (Emergency)
+  - Offline fuel monitoring
+  - Statistics - Daily/Weekly/Monthly consumption
+  - Shopping portal to buy product 
+  - Payments
+  - Mileage Analysis
+  - Alert notification for low mileage
+  - Grievances
+  - Voice Control
+  - Petrol fraud
+  - Security
 ##### Track
 Coming Soon...
 ##### Tech Stack -
