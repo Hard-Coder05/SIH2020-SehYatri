@@ -1,6 +1,17 @@
 # Team X SIH 2020
 Team X's official repository for Smart India Hackathon'20 problem statememt AJ128.
 
+## Android :
+
+The Android app is built on Android Studio platform. 
+
+## Setup :
+
+  - Open Adroid Studio (Download: https://developer.android.com/studio/install )
+  - Import the App folder from the local repository on Android Studio.
+  - Build the app.
+  - Now, you can view the files and code!
+  
 ## Backend:
 
 We've created the backend of our project in Django using the Django's predefined User Model and Heroku is used for deployment. For the database, we're using PostgreSQL. Currently, the backend supports user registration and login only. 
