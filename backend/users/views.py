@@ -71,18 +71,3 @@ class LoginView(APIView):
             return Response(data, status.HTTP_400_BAD_REQUEST)
 
 
-class RealtimeView(APIView):
-    @swagger_auto_schema(
-        operation_id='realtime_update',
-        request_body=RealtimeSerializer,
-        responses={
-
-        },
-    )
-    def put(self, request):
-        user = request.user
-        serializer = RealtimeSerializer(data=request.data)
-        if serializer.is_valid():
-            serializer.save()
-            return Response({}, status.HTTP_200_OK)
-        return Response(serializer.errors, status.HTTP_400_BAD_REQUEST)
