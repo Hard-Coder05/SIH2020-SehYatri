@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">SIH</string>
+    <string name="login">लॉग इन करें</string>
+    <string name="changelanguage">भाषा बदलो</string>
+    <string name="phone">फ़ोन नंबर</string>
+    <string name="password">कुंजिका</string>
+    <string name="signup">पंजीकृत नहीं?</string>
+    <string name="register">रजिस्टर करें</string>
+    <string name="name">नाम</string>
+    <string name="refreshFuel">ईंधन स्तर</string>
+    <string name="forgotpwd">पासवर्ड भूल गए??</string>
+    <string name="sendSms">आपातकालीन संपर्क के लिए SMS भेजें</string>
+</resources>
