@@ -1,19 +1,19 @@
 #include<SoftwareSerial.h>
 SoftwareSerial btserial(0,1);
-int trigger_pin = 2;
+int trigger_pin = 2; //ultrasonic sensor
 
-int echo_pin = 3;
+int echo_pin = 3; //ultrasonic sensor
 
-int buzzer_pin = 10; 
+int time;
 
-float time;
-
-float distance; 
-
-float height = 40;
+int distance; 
 
 
+//assuming the tank to be cylindrical
 
+float height = 40; //height of the tank
+
+//float radius = 10 //radius of the tank
 
 void setup ( ) {
 
@@ -26,7 +26,7 @@ void setup ( ) {
 
         pinMode (echo_pin, INPUT);
 
-        pinMode (buzzer_pin, OUTPUT);
+        pinMode (10, OUTPUT);
 
 
 
@@ -49,11 +49,13 @@ void loop ( ) {
     distance = (time * 0.034) / 2;
 if(distance>height)
 {
-  Serial.println(100);
+  Serial.println(100); //fuel in percentage
+  //Serial.println()
 }
 else
 {
-Serial.println(((height-distance)/height)*100);
+Serial.println(((height-distance)/height)*100); //fuell in percentage
+ //Serial.prtintln()
 }
 
   }
