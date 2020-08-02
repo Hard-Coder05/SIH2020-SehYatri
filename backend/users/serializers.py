@@ -24,10 +24,12 @@ class RegistrationSerializer(serializers.ModelSerializer):
     phone = serializers.CharField(allow_blank=True, required=False, error_messages={
         "required": "Name field is required.",
     },)
-
+    fuel_tank_capacity = serializers.CharField(allow_blank=True, required=False, error_messages={
+        "required": "Name field is required.",
+    },)
     class Meta:
         model = User
-        fields = ['name', 'phone', 'password']
+        fields = ['name', 'phone', 'password','fuel_tank_capacity']
 
     def save(self):
         last_user_id = 0
@@ -41,6 +43,7 @@ class RegistrationSerializer(serializers.ModelSerializer):
             username=self.validated_data['phone'],
             password=self.validated_data['password'],
             phone=self.validated_data['phone'],
+            fuel_tank_capacity=self.validated_data['fuel_tank_capacity'],
             route_slug=route_slug,
         )
 
