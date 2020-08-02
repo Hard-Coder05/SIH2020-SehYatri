@@ -49,7 +49,7 @@ void loop ( ) {
     distance = (time * 0.034) / 2;
 if(distance>height)
 {
-  Serial.println(1000);
+  Serial.println(100);
 }
 else
 {
