@@ -5,6 +5,17 @@ Team X's official repository for Smart India Hackathon'20 problem statememt AJ12
 
 We've created the backend of our project in Django using the Django's predefined User Model and Heroku is used for deployment. For the database, we're using PostgreSQL. Currently, the backend supports user registration and login only. 
 
+### Setup :
+  - Create a virtual environment with Python3.7: virtualenv env -p python3.7. If you dont have python3.7 yet then you can install it with:
+  linux(ubuntu/debian) - sudo apt install python3.7
+  windows - Download installer from https://www.python.org/downloads/release/python-370/.
+  - Activate the virutal environment: source env/bin/activate
+  - Install all the dependencies in requirements.txt file: pip install -r requirements.txt
+  - Migrate the migrations: python manage.py migrate
+  - Run the app: python manage.py runserver
+  - Navigate to http://localhost:8000 in your browser
+  - When you are done using the app, deactivate the virtual environment: deactivate
+
 The **API** for registration and login is served on the heroku app at :  http://whispering-harbor-50094.herokuapp.com/docs
 
 ## IoT :
