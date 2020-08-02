@@ -8,7 +8,7 @@ We've created the backend of our project in Django using the Django's predefined
 ### Setup :
   - Create a virtual environment with Python3.7: virtualenv env -p python3.7. If you dont have python3.7 yet then you can install it with:
   linux(ubuntu/debian) - sudo apt install python3.7
-  windows - Download installer from https://www.python.org/downloads/release/python-370/.
+   windows - Download installer from https://www.python.org/downloads/release/python-370/.
   - Activate the virutal environment: source env/bin/activate
   - Install all the dependencies in requirements.txt file: pip install -r requirements.txt
   - Migrate the migrations: python manage.py migrate
