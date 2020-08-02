@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">SIH</string>
+    <string name="login">LOG IN</string>
+    <string name="changelanguage">CHANGE APP LANGUAGE</string>
+    <string name="phone">Phone Number</string>
+    <string name="password">Password</string>
+    <string name="signup">Not registered?</string>
+    <string name="register">REGISTER</string>
+    <string name="name">Name</string>
+    <string name="refreshFuel">Refresh Fuel Level</string>
+    <string name="forgotpwd">Forgot Password??</string>
+    <string name="sendSms">Send SMS to emergency contact</string>
+</resources>

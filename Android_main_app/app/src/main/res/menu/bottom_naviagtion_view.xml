@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/home"
+        android:enabled="true"
+        android:icon="@drawable/home"
+        android:title=""
+        android:visible="true">
+
+    </item>
+
+    <item
+        android:id="@+id/analytics"
+        android:enabled="true"
+        android:icon="@drawable/analytics"
+        android:title=""
+        android:visible="true">
+
+    </item>
+
+</menu>

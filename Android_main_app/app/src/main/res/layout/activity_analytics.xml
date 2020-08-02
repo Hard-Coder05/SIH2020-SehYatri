@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/homebg"
+    tools:context=".AnalyticsActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/relLayout1">
+
+            <Button
+                android:id="@+id/sendSms"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentEnd="true"
+                android:layout_marginStart="82dp"
+                android:layout_marginTop="357dp"
+                android:layout_marginEnd="86dp"
+                android:background="@drawable/bg_button_white"
+                android:text="@string/sendSms"
+                android:textAlignment="center"
+                android:textColor="#ffffff"
+                android:textStyle="bold" />
+
+            <Button
+                android:layout_width="wrap_content"
+                android:id="@+id/findPetrolPump"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentEnd="true"
+                android:layout_marginStart="85dp"
+                android:layout_marginTop="271dp"
+                android:layout_marginEnd="83dp"
+                android:background="@drawable/bg_button_white"
+                android:text="Find nearest Petrol Pump"
+                android:textAlignment="center"
+                android:textColor="#ffffff"
+                android:textStyle="bold" />
+
+        </RelativeLayout>
+
+        <include layout="@layout/layout_bottom_navigation_view"></include>
+
+    </RelativeLayout>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
