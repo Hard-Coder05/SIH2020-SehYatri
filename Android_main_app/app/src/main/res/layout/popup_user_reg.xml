@@ -11,7 +11,7 @@
     <com.google.android.material.textfield.TextInputLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
+        android:layout_marginTop="5dp"
         android:textColorHint="#000">
 
 
@@ -26,34 +26,33 @@
             android:ems="10"
             android:id="@+id/name"
             android:textColor="#000"
-            android:textSize="20sp" />
+            android:textSize="15sp" />
 
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
+        android:layout_marginTop="5dp"
         android:textColorHint="#000">
 
         <com.google.android.material.textfield.TextInputEditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:backgroundTint="#ffff"
-            android:drawableStart="@drawable/lock"
+            android:drawableStart="@drawable/user"
             android:hint="@string/phone"
             android:drawablePadding="15dp"
-            android:inputType="textPassword"
             android:ems="10"
             android:id="@+id/phone"
             android:textColor="#000"
-            android:textSize="20sp" />
+            android:textSize="15sp" />
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
+        android:layout_marginTop="5dp"
         android:textColorHint="#000">
 
         <com.google.android.material.textfield.TextInputEditText
@@ -67,19 +66,38 @@
             android:ems="10"
             android:id="@+id/password"
             android:textColor="#000"
-            android:textSize="20sp" />
+            android:textSize="15sp" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:textColorHint="#000">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="#ffff"
+            android:drawableStart="@drawable/lock"
+            android:hint="Fuel Capacity "
+            android:drawablePadding="15dp"
+            android:ems="10"
+            android:id="@+id/fuelCap"
+            android:textColor="#000"
+            android:textSize="15sp" />
     </com.google.android.material.textfield.TextInputLayout>
 
     <FrameLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="18dp"
+        android:layout_marginTop="5dp"
         >
         <Button
             android:elevation="5dp"
             android:id="@+id/register"
             android:layout_width="match_parent"
-            android:layout_height="50dp"
+            android:layout_height="30dp"
             android:text="@string/register"
             style="@style/Base.Widget.AppCompat.Button.Borderless"
             android:textColor="@android:color/white"

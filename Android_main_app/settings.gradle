@@ -1,2 +1,2 @@
 rootProject.name='SIH'
-include ':app'
+include ':app', ':mapModule'

@@ -46,6 +46,8 @@ public class LoginActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 showLoginPopup();
+               /* Intent intent = new Intent(LoginActivity.this,HomeActivity.class);
+                startActivity(intent);*/
             }
         });
         btnChngelang.setOnClickListener(new View.OnClickListener() {
@@ -192,20 +194,21 @@ public class LoginActivity extends AppCompatActivity {
         final EditText user = customview.findViewById(R.id.name);
         final EditText phonenum = customview.findViewById(R.id.phone);
         final EditText pass = customview.findViewById(R.id.password);
+        final EditText fuel_tank_capacity = customview.findViewById(R.id.fuelCap);
         register = customview.findViewById(R.id.register);
         register.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 if(validateRegister(user.getText().toString(),phonenum.getText().toString(),pass.getText().toString())){
                     //api call
-                    registerApiCall(user.getText().toString(),phonenum.getText().toString(),pass.getText().toString());
+                    registerApiCall(user.getText().toString(),phonenum.getText().toString(),pass.getText().toString(),fuel_tank_capacity.getText().toString());
                 }
             }
         });
     }
 
-    private void registerApiCall(String name, String phone, String password) {
-        RegisterDetails details = new RegisterDetails(name,phone,password);
+    private void registerApiCall(String name, String phone, String password,String fuel_tank_capacity) {
+        RegisterDetails details = new RegisterDetails(name,phone,password,fuel_tank_capacity);
         Call<AuthResponse> call = AppClient.getInstance().createService(APIServices.class).postRegisterUser(details);
         call.enqueue(new Callback<AuthResponse>() {
             @Override
