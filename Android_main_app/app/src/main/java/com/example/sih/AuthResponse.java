@@ -31,6 +31,13 @@ public class AuthResponse implements Serializable {
     private
     String message;
 
+    @SerializedName("fuel_tank_capacity")
+    @Expose
+    private
+    String fuel_tank_capacity;
+
+
+
     public void setName(String name) {
         this.name = name;
     }
@@ -51,6 +58,10 @@ public class AuthResponse implements Serializable {
         this.message = message;
     }
 
+    public void setFuel_tank_capacity(String fuel_tank_capacity) {
+        this.fuel_tank_capacity = fuel_tank_capacity;
+    }
+
     public String getName() {
         return name;
     }
@@ -69,5 +80,9 @@ public class AuthResponse implements Serializable {
 
     public String getMessage() {
         return message;
+    }
+
+    public String getFuel_tank_capacity() {
+        return fuel_tank_capacity;
     }
 }

@@ -16,6 +16,65 @@
             android:layout_height="wrap_content"
             android:id="@+id/relLayout1">
 
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Estimate the required fuel amount"
+                android:textSize="20sp"
+                android:layout_marginTop="30dp"
+                android:layout_centerHorizontal="true"
+                android:textColor="#ffffff"
+                android:textStyle="bold"
+                android:id="@+id/txtPlan"/>
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/mileage"
+                android:hint="Mileage"
+                android:layout_below="@id/txtPlan"
+                android:padding="5dp"
+                android:layout_marginTop="35dp"
+                android:textStyle="bold"
+                android:textColorHint="#ffffff"
+                android:textColor="#ffffff" />
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/distance"
+                android:hint="Distance"
+                android:layout_below="@id/mileage"
+                android:padding="5dp"
+                android:layout_marginTop="15dp"
+                android:textStyle="bold"
+                android:textColorHint="#ffffff"
+                android:textColor="#ffffff" />
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/distance"
+                android:layout_marginTop="20dp"
+                android:id="@+id/go"
+                android:text="GO"
+                android:background="@drawable/bg_button_white"
+                android:layout_centerHorizontal="true"
+                android:textColor="#ffffff"
+                android:textStyle="bold"
+                android:textSize="20sp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Tap to check fuel price in your area"
+                android:textSize="20sp"
+                android:layout_marginTop="300dp"
+                android:layout_centerHorizontal="true"
+                android:textColor="#ffffff"
+                android:textStyle="bold"
+                android:id="@+id/checkPrice"/>
+
             <Button
                 android:id="@+id/sendSms"
                 android:layout_width="wrap_content"
@@ -24,7 +83,7 @@
                 android:layout_alignParentTop="true"
                 android:layout_alignParentEnd="true"
                 android:layout_marginStart="82dp"
-                android:layout_marginTop="357dp"
+                android:layout_marginTop="425dp"
                 android:layout_marginEnd="86dp"
                 android:background="@drawable/bg_button_white"
                 android:text="@string/sendSms"
@@ -40,7 +99,7 @@
                 android:layout_alignParentTop="true"
                 android:layout_alignParentEnd="true"
                 android:layout_marginStart="85dp"
-                android:layout_marginTop="271dp"
+                android:layout_marginTop="350dp"
                 android:layout_marginEnd="83dp"
                 android:background="@drawable/bg_button_white"
                 android:text="Find nearest Petrol Pump"
