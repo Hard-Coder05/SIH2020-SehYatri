@@ -47,8 +47,7 @@ Features : (as suggested in the problem statement)
   - Petrol fraud
   - Security
   - More CS
-##### Track
-Coming Soon...
+
 ##### Tech Stack -
   - Java
   - Android Studio
@@ -61,8 +60,7 @@ Coming Soon...
   - Django
   - More..
   
-##### Future Prospects -
-Coming Soon..
+
 
 
 
