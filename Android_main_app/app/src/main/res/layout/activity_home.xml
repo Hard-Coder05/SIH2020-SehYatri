@@ -8,45 +8,48 @@
     tools:context=".HomeActivity">
 
     <RelativeLayout
+        android:id="@+id/relativeLayout"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
-        <RelativeLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/relLayout1">
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:id="@+id/data"
-                android:layout_marginTop="50dp"
-                android:layout_centerHorizontal="true"
-                android:textSize="50sp"
-                android:text="10"
-                android:textStyle="bold"
-                android:textColor="#ffffff"/>
-
-
-            <Button
-                android:layout_width="129dp"
-                android:layout_height="38dp"
-                android:layout_alignParentStart="true"
-                android:layout_alignParentTop="true"
-                android:id="@+id/loadFuel"
-                android:layout_alignParentEnd="true"
-                android:layout_marginStart="138dp"
-                android:layout_marginTop="350dp"
-                android:layout_marginEnd="143dp"
-                android:background="@drawable/bg_button_white"
-                android:text="FIND READING"
-                android:textAlignment="center"
-                android:textColor="#ffffff"
-                android:textStyle="bold" />
-
-        </RelativeLayout>
-
         <include layout="@layout/layout_bottom_navigation_view"></include>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/relLayout1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_anchor="@+id/relativeLayout"
+        app:layout_anchorGravity="center">
+
+        <TextView
+            android:id="@+id/data"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="50dp"
+            android:text="10"
+            android:textColor="#ffffff"
+            android:textSize="50sp"
+            android:textStyle="bold" />
+
+
+        <Button
+            android:id="@+id/loadFuel"
+            android:layout_width="129dp"
+            android:layout_height="38dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginStart="138dp"
+            android:layout_marginTop="350dp"
+            android:layout_marginEnd="143dp"
+            android:background="@drawable/bg_button_white"
+            android:text="FIND READING"
+            android:textAlignment="center"
+            android:textColor="#ffffff"
+            android:textStyle="bold" />
 
     </RelativeLayout>
 

@@ -61,7 +61,7 @@ public class AnalyticsActivity extends AppCompatActivity {
             public void onClick(View v) {
                 double dist = Double.parseDouble(distance.getText().toString());
                 double mile = Double.parseDouble(mileage.getText().toString());
-                double ans = mile/dist;
+                double ans = dist/mile;
                 go.setText(String.format("%.3f",ans));
             }
         });
