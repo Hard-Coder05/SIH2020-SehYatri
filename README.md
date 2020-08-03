@@ -1,6 +1,7 @@
 # Team X SIH 2020
 Team X's official repository for Smart India Hackathon'20 problem statememt AJ128.
 
+
 ## Android :
 
 The Android app is built on Android Studio platform. 
@@ -41,6 +42,7 @@ We are using Arduino Uno microcontroller board to send fuel tank level sensor da
 4. Jumper Wires
 5. USB Cable
 6. Arduino IDE (to upload program to the board)
+7. ThingSpeak Database
 
 You can download the Arduino IDE from: https://www.arduino.cc/en/main/software
 
