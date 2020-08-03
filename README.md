@@ -5,6 +5,13 @@ Team X's official repository for Smart India Hackathon'20 problem statememt AJ12
 
 The Android app is built on Android Studio platform. 
 
+![file](/Android_images/1.jpeg)
+![file](/Android_images/2.jpeg)
+![file](/Android_images/3.jpeg)
+![file](/Android_images/4.jpeg)
+![file](/Android_images/5.jpeg)
+![file](/Android_images/6.jpeg)
+![file](/Android_images/7.jpeg)
 ## Setup :
 
   - Open Adroid Studio (Download: https://developer.android.com/studio/install )
