@@ -12,9 +12,12 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
+import android.widget.TextView;
 
 import com.example.mapmodule.MapsActivity;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
+
+import java.net.URL;
 
 public class HomeActivity extends AppCompatActivity {
 
@@ -22,6 +25,7 @@ public class HomeActivity extends AppCompatActivity {
      Button loadFuel;
      NotificationCompat.Builder notification;
     private static final int uniqueID = 45612;
+    public  static TextView data;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -29,12 +33,28 @@ public class HomeActivity extends AppCompatActivity {
         setContentView(R.layout.activity_home);
         setUpBottomNavigationView();
         initialiseWidgets();
+        loadFuel.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                 fetchIOT retrieve = new fetchIOT();
+                 retrieve.execute();
+            }
+        });
+        notification = new NotificationCompat.Builder(this);
+        notification.setAutoCancel(true);
     }
 
     private void initialiseWidgets() {
         loadFuel = findViewById(R.id.loadFuel);
         notification = new NotificationCompat.Builder(this);
         notification.setAutoCancel(true);
+        data = findViewById(R.id.data);
+        if (data.getText().toString()!=null){
+            int x = Integer.parseInt(data.getText().toString());
+            if(x<50){
+                button();
+            }
+        }
     }
 
     public void button() {

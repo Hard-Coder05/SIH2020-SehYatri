@@ -10,4 +10,11 @@
     <string name="refreshFuel">Refresh Fuel Level</string>
     <string name="forgotpwd">Forgot Password??</string>
     <string name="sendSms">Send SMS to emergency contact</string>
+    <string name="checkPrice">Tap to check fuel price</string>
+    <string name="estimateFuel">Estimate required fuel</string>
+    <string name="mileage">Mileage of vehicle(km/l)</string>
+    <string name="distance">Distance to be covered(km)</string>
+    <string name="go">GO</string>
+    <string name="findPumps">Find nearby petrol pumps</string>
+
 </resources>

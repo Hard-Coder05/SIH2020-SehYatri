@@ -11,4 +11,10 @@
     <string name="refreshFuel">ईंधन स्तर</string>
     <string name="forgotpwd">पासवर्ड भूल गए??</string>
     <string name="sendSms">आपातकालीन संपर्क के लिए SMS भेजें</string>
+    <string name="findPumps">आस-पास के पेट्रोल पंप खोजें</string>
+    <string name="checkPrice">आज के ईंधन मूल्य की जांच करने के लिए टैप करें</string>
+    <string name="estimateFuel">आवश्यक ईंधन का अनुमान लगाएं</string>
+    <string name="mileage">वाहन का माइलेज (किमी / लीटर)</string>
+    <string name="distance">दूरी(किमी)</string>
+    <string name="go">GO</string>
 </resources>
