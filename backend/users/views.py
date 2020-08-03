@@ -46,7 +46,7 @@ class LoginView(APIView):
         },
     )
     def post(self, request):
-        return Response({},status.HTTP_202_ACCEPTED)
+     #   return Response({},status.HTTP_202_ACCEPTED)
         serializer = LoginSerializer(data=request.data)
 
         if serializer.is_valid():

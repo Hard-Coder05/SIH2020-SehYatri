@@ -5,5 +5,4 @@ from users.views import *
 urlpatterns = [
     path('register/', RegistrationView.as_view(), name='register'),
     path('login/', LoginView.as_view(), name='login'),
-    path('update/',RealtimeView.as_view(),name='update')
 ]
