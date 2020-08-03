@@ -55,8 +55,3 @@ class LoginSerializer(serializers.Serializer):
     phone = serializers.CharField(allow_blank=False)
     password = serializers.CharField(allow_blank=False)
 
-
-class RealtimeSerializer(serializers.Serializer):
-    class Meta:
-        model = Realtime
-        fields = ('realtime_data')
